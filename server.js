@@ -34,6 +34,7 @@ app.get("/api/:timestamp", function (req, res) {
 });
 
 app.get("/api/timestamp/", (req, res) =>{
+  let date = new Date();
   res.json({unix: date.valueOf(), utc: date.toUTCString() });
 });
 
